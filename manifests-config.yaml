@@ -110,7 +110,7 @@ components:
       sourcePath: config
     rhoai:
       repo: red-hat-data-services/ai-gateway-operator
-      ref: rhoai-3.6@1d973e701313165ca639100fa105b4fb57516c01
+      ref: rhoai-3.6@305e3f31b86e3202508ed728e60c342364a6afe3
       sourcePath: config
   mcplifecycleoperator:
     odh:
@@ -180,11 +180,11 @@ componentCharts:
   data:
     odh:
       repo: opendatahub-io/feast-module-operator
-      ref: main@40d8a6f2d557d18a86b664f768c91a7561b989a4
+      ref: main@d1c6cc51ef3519e4205559da41fef4b22ac0ba44
       sourcePath: config/chart
     rhoai:
       repo: red-hat-data-services/feast-module-operator
-      ref: rhoai-3.6@61e5752df70ee245624948138c5828d36876d975
+      ref: rhoai-3.6@613f0eab969c9e577d9d31c9b82fc6c5f0deeb1a
       sourcePath: config/chart
   databaseservice:
     odh:
@@ -199,11 +199,11 @@ componentCharts:
   odh-observability:
     odh:
       repo: opendatahub-io/odh-observability
-      ref: main@012afe77eaa4aefb9242103e445788d894e19bcb
+      ref: main@007aff5dee9a12e2597c326158829b99d15e0088
       sourcePath: charts/odh-observability
     rhoai:
       repo: red-hat-data-services/odh-observability
-      ref: rhoai-3.6@35704627e1f5cab290d302e3dd5b44cb45fe22d1
+      ref: rhoai-3.6@780824e2eb29bd2182b80d52777c26c5bbff37a9
       sourcePath: charts/odh-observability
 # Image overrides — pinned operator image digests, keyed by RELATED_IMAGE_* env var name.
 # Local directories symlinked into opt/manifests/ during development.
@@ -347,7 +347,7 @@ imageOverrides:
       digest: "sha256:d0e588a292b3dd3e34f04c4648208798a42a8c4a73357259ce0ad7fa5a4a2727"
     rhoai:
       base: "quay.io/rhoai/odh-ai-gateway-operator-rhel9"
-      digest: "sha256:d894a18a2d97e51e5512545b0860f3497a18ffdb68c10dd25939a042d3860e38"
+      digest: "sha256:b815b362240c6e9e68e5efbdd460e7a3d8b05ee4aea0d29cae5538c2f5829611"
   RELATED_IMAGE_ODH_MCP_LIFECYCLE_MODULE_OPERATOR_IMAGE:
     component: mcplifecycleoperator
     tagTemplate: "{SHA}"
@@ -389,10 +389,10 @@ imageOverrides:
     tagTemplate: "{SHA}"
     odh:
       base: "quay.io/opendatahub/odh-feast-module-operator"
-      digest: "sha256:5d9e2b080110f6451fffd2ca2383ea9a15dbdf11c7d65e1935053dd51c3fecff"
+      digest: "sha256:7ccaf62e11a9ca6a6d95a2afc5073d9e9104eb9d6175f0a0666eebe103cca2d0"
     rhoai:
       base: "quay.io/rhoai/odh-feast-module-operator-rhel9"
-      digest: "sha256:74117a7cbc70716d88d7b3a7339fa952009d88a49769b43650a1a5f71a3460f7"
+      digest: "sha256:27e3451cef327638a9f2a57c3712a2260b76195a981da01751850958f19e155f"
   RELATED_IMAGE_ODH_MCP_LIFECYCLE_OPERATOR_IMAGE:
     component: mcplifecycleoperator
     source: "csv"
@@ -422,10 +422,10 @@ imageOverrides:
     component: data
     odh:
       base: "quay.io/opendatahub/feast-operator"
-      digest: "sha256:44bcdf95c7ac64ad7192bdc75f24c09c6e917d134b7621db7627f108384436b3"
+      digest: "sha256:0d821aeaadcd326c1320fa4f81ab8a4b05706dac9bac9c6f03dd4098fe22f4a6"
     rhoai:
       base: "quay.io/rhoai/odh-feast-operator-rhel9"
-      digest: "sha256:391dbffcb9ed339c572bb75cf10cc4ad4a9e0d3ff23c017e5ec0614ecc36b350"
+      digest: "sha256:88d3406d3ba4021dc87a7a8bddf69ce642cbc0908ce2609a484041d2c49fc454"
   RELATED_IMAGE_ODH_AGENTS_OPERATOR_IMAGE:
     source: "csv"
     odh:
@@ -525,10 +525,10 @@ imageOverrides:
     source: "csv"
     odh:
       base: "quay.io/opendatahub/feature-server"
-      digest: "sha256:3092c7fe65fdd2074455751192edca64ddb7d800ce631680de13d9dace1ed76b"
+      digest: "sha256:98672911c37cad76859d38c5ec3c8c26f62147bccaea33f2b4dfb7c50b2f0d40"
     rhoai:
       base: "quay.io/rhoai/odh-feature-server-rhel9"
-      digest: "sha256:d19280698ccca689ae28a35557a59677ee1c73a79421db90b3ec88389679260f"
+      digest: "sha256:a9e9b38b6778ff1a7ce55d04627fb24f4470075cbea9d0525889465c0f025c5e"
   RELATED_IMAGE_ODH_FMS_GUARDRAILS_ORCHESTRATOR_IMAGE:
     source: "csv"
     odh:
@@ -882,10 +882,10 @@ imageOverrides:
     source: "csv"
     odh:
       base: "quay.io/opendatahub/odh-observability"
-      digest: "sha256:30d2321d9e938c873f29e32b1d6662510074bd8fd5caa8ce8725cabb8d73ca7b"
+      digest: "sha256:d09875632242ee893d84462a119216cfb23a8a9e5bc200e9090bf923dd600660"
     rhoai:
       base: "quay.io/rhoai/odh-observability-rhel9"
-      digest: "sha256:cf27adb18895a1437b68beccf4490477829ec475089bd7617c0d2074729b922f"
+      digest: "sha256:d4bd36379fb7bca29a4e1175623d5e795bbbad0424e8109ed709529d61b8e604"
   RELATED_IMAGE_ODH_OGX_CORE_IMAGE:
     source: "csv"
     odh:
