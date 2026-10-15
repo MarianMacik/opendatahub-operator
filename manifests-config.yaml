@@ -43,11 +43,11 @@ components:
   trustyai:
     odh:
       repo: opendatahub-io/trustyai-service-operator
-      ref: main@b4e177cc0eabca4b4fc7e9aa6f1618564730b405
+      ref: main@36c433585e1432b4fa9f299b9107a65106ee8ab9
       sourcePath: trustyai-operator-module/config
     rhoai:
       repo: red-hat-data-services/trustyai-service-operator
-      ref: rhoai-3.6@661e43926f8f65110d67a9539b8cc18837e59174
+      ref: rhoai-3.6@a703395566bc0df5354b489b11c48f80c878b678
       sourcePath: trustyai-operator-module/config
   aihub:
     odh:
@@ -277,10 +277,10 @@ imageOverrides:
     tagTemplate: "{SHA}"
     odh:
       base: "quay.io/opendatahub/trustyai-service-operator"
-      digest: "sha256:ac0b89e5a3486dbae4e071d7e8100fc8251a62adb1cdad4aa9cc79dcc00bb4e2"
+      digest: "sha256:c66a771901942e1052c5c2c5b8e6540b477219e3a8e78b756186c90e78cc44a1"
     rhoai:
       base: "quay.io/rhoai/odh-trustyai-service-operator-rhel9"
-      digest: "sha256:2cea2060d06c0893d2d8a8e303749ad6d98d056dfc67d6b548ba408703a0edde"
+      digest: "sha256:a2f86fb4f0ff805adb83fea8e30ed2dc1ec01ff5e0bb6dc855e07df6f3ba66b0"
   RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE:
     component: aihub
     paramsEnvKey: IMAGES_MODELREGISTRY_OPERATOR
